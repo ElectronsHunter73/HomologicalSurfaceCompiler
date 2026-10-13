@@ -1,0 +1,26 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homological-surface-compiler"
+version = "0.1.0"
+description = "Homological logical operations and lattice surgery in surface codes"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "sympy>=1.13"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8"
+]
+
+[tool.setuptools.packages.find]
+include = ["homological_compiler*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
